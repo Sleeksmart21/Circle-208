@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.body-wrap {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: red;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(78, 70, 60);
+    display: block;
+    cursor: pointer;
+}
+
+span {
+    height: fit-content;
+}
+
+#mobile-menu {
+    transform: translate(5%, 20%);
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+    position: absolute;
+    top: 50px;
+    right: -250px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(78, 70, 60);
+    padding: 10px 25px;
+    transition: right 0.2s;
+}
+
+.nav-menu.active {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    display: block;
+    z-index: 33;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.members-toggle {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.members {
+    display: flex;
+    align-items: flex-start;
+}
+
+.members h5 {
+    color: #d4d4d4;
+}
+
+.github-link {
+    margin-left: 10px;
+}
+
+.circle-208 {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section {
+    margin: 80px auto 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: rgb(78, 70, 60);
+    margin-bottom: 15px;
+}
+
+.hero-section h4 {
+    color: rgb(78, 70, 60);
+    font-weight: 400;
+}
+
+.main {
+    margin: 30px auto;
+    padding: auto;
+    display: flex;
+    align-items: center;
+}
+
+#phone-form {
+    display: flex;
+    align-items: center;
+}
+
+.service-provider {
+    align-self: center;
+    border-radius: 6px;
+    border: 3px red solid;
+    border-right: none;
+    width: 50px;
+    height: 50px;
+}
+.service-provider img {
+    width: 100%;
+    height: 100%;
+}
+
+#phone-number {
+    height: 50px;
+    width: 400px;
+    border: 3px solid red;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: large;
+    outline: none;
+    position: relative;
+}
+
+#submit {
+    margin-left: 5px;
+    height: 50px;
+    color: #fff;
+    background: red;
+    font-size: large;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+}
+
+.fa-solid {
+    height: 100%;
+}
+
+
+
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 320px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100px;
+    overflow-x: hidden;
+    width: 450px;
+    
+}
+
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+
+.not-found {
+    margin-top: 5px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.not-found.show {
+    visibility: visible;
+}
+
+
+@media screen and (max-width: 600px) {
+    .hero-section {
+        margin-top: 120px;
+    }
+
+    .main {
+        margin-top: 60px;
+    }
+    #submit {
+        display: block;
+        width: 450px;
+        margin-top: 10px;
+    }
+
+    #phone-form {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+	.autocomplete-items {
+        top: 390px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #submit {
+        width: 350px;
+    }
+
+    #phone-number {
+        width: 300px;
+    }
+
+	.autocomplete-items {
+        width: 80%;
+    }
+}
